@@ -1,13 +1,17 @@
-VirtualCamera tweak. Replaces the camera's image/video output with an arbitrary image or video file. Tested on iOS 15 - 17
+VirtualCamera调整。将相机的图像/视频输出替换为任意的图像或视频文件。在iOS 15 - 17上测试
 
-This works by hooking into `mediaserverd`, which is responsible for, among other things, connecting to the camera hardware and forwarding image data to interested clients (such as user-installed apps). VCam works in apps even if they don't have tweak injection
+这通过连接到“mediaserverd”来工作，除其他外，mediaserverd负责连接到相机硬件并将图像数据转发给感兴趣的客户端（如用户安装的应用程序）。VCam在应用程序中工作，即使它们没有调整注入
 
-This is POC stage. The filepath to the "replacement media" is hardcoded in `image_utils.m`. Memory leaks kill `mediaserverd` every 30s
+这是POC阶段。“替换媒体”的文件路径在`image_utils.m`中硬编码。内存泄漏每30秒就会杀死“mediaserverd”
 
-**image file** 
+**图像文件**
+
 ---
-<img src=".imgs/image.png"  width="50%">
 
-**video file**
+<img src=".imgs/image.png" width="50%">
+
+**视频文件**
+
 ---
+
 <img src=".imgs/video.gif" width="50%">
